@@ -29,7 +29,7 @@ const Header = () => {
                 <ul className="nav nav-pills navbar-right">
                   <li><a href="/admin/addProducts">My Account</a></li>
                   <li><a href="/wishlist">Wishlist</a></li>
-                  <li><a href="#">Cart</a></li>
+                  <li><a href="/cart">Cart</a></li>
                   <li><a href="/admin">Checkout</a></li>
                   <li>
                     <a href="#">

@@ -1,8 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <div>
       <header className="header-section">
@@ -28,12 +32,24 @@ const Navbar = () => {
             {/* Collect the nav links, forms, and other content for toggling */}
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li className="active"><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/product">Products</Link></li>
-                <li><Link to="#">Shop</Link></li>
-                <li><Link to="#">Blog</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
+                <li className={currentPath === '/' ? 'active' : ''}>
+                  <Link to="/">Home</Link>
+                </li>
+                <li className={currentPath === '/about' ? 'active' : ''}>
+                  <Link to="/about">About Us</Link>
+                </li>
+                <li className={currentPath === '/product' ? 'active' : ''}>
+                  <Link to="/product">Products</Link>
+                </li>
+                <li className={currentPath === '/shop' ? 'active' : ''}>
+                  <Link to="/shop">Shop</Link>
+                </li>
+                <li className={currentPath === '/blog' ? 'active' : ''}>
+                  <Link to="/blog">Blog</Link>
+                </li>
+                <li className={currentPath === '/contact' ? 'active' : ''}>
+                  <Link to="/contact">Contact Us</Link>
+                </li>
               </ul>
 
               <ul className="nav navbar-nav navbar-right cart-menu">

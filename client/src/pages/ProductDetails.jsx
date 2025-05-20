@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -60,7 +61,10 @@ const ProductDetails = () => {
   return (
     <div className="product-container">
       <nav className="breadcrumb">
-        Home / Products / {product.category} / <span className="highlight">{product.pname}</span>
+        <Link to="/" className="text-blue-500 hover:underline">Home</Link> /
+        <Link to="/product" className="text-blue-500 hover:underline"> Products</Link> /
+        {product.category} /
+        <span className="highlight">{product.pname}</span>
       </nav>
 
       <div className="details-card">
@@ -116,7 +120,7 @@ const ProductDetails = () => {
 
             {product.features && (
               <>
-                
+
                 <ul className="list-disc pl-6 space-y-1 text-gray-700">
                   {product.features.split(',').map((feature, i) => (
                     <li key={i}>{feature.trim()}</li>
