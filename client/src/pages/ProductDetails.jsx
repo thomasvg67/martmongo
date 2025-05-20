@@ -12,7 +12,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = async () => {
     try {
-      await axios.post('http://localhost:5000/api/cart', {
+      await axios.post('https://mart-mongo-server.onrender.com/api/cart', {
         product_id: product._id,
         quantity: 1
       });
@@ -23,13 +23,13 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`https://mart-mongo-server.onrender.com/api/products/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch product");
         return res.json();
       })
       .then((data) => {
-        const baseImageUrl = "http://localhost:5000/products/";
+        const baseImageUrl = "https://mart-mongo-server.onrender.com/products/";
         const images = [];
         if (data.image1) images.push(baseImageUrl + data.image1);
         if (data.image2) images.push(baseImageUrl + data.image2);

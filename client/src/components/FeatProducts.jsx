@@ -70,7 +70,7 @@ const FeatProducts = () => {
             >
               <div className="product-item">
                 <img
-                  src={product.image1 ? `https://mart-mongo-server.onrender.com/products/${product.image1}` : '/assets/images/default-product.png'}
+                  src={product.image1 ? `${backendUrl}/products/${product.image1}` : '/assets/images/default-product.png'}
                   width="255"
                   height="322"
                   alt={product.name}

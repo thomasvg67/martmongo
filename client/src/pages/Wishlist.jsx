@@ -5,7 +5,7 @@ const Wishlist = () => {
     const [wishlist, setWishlist] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/wishlist')
+        axios.get('https://mart-mongo-server.onrender.com/api/wishlist')
             .then(res => {
                 setWishlist(res.data);
             })
