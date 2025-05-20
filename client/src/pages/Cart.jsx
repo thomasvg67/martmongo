@@ -7,7 +7,7 @@ const Cart = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/cart')
+        axios.get('https://mart-mongo-server.onrender.com/api/cart')
             .then(res => {
                 setCartItems(res.data);
                 setLoading(false);
