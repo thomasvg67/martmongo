@@ -28,7 +28,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+                const { data } = await axios.get(`https://mart-mongo-server.onrender.com/api/products/${id}`);
                 setFormData({
                     pname: data.pname || '',
                     category: data.category || '',

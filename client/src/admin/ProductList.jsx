@@ -11,7 +11,7 @@ const ProductList = () => {
     }, []);
 
     const fetchProducts = () => {
-        axios.get('http://localhost:5000/api/products')
+        axios.get('https://mart-mongo-server.onrender.com/api/products')
             .then(res => setProducts(res.data))
             .catch(err => console.error('Error fetching products:', err));
     };
@@ -20,7 +20,7 @@ const ProductList = () => {
         const confirm = window.confirm('Are you sure you want to delete this product?');
         if (confirm) {
             try {
-                await axios.delete(`http://localhost:5000/api/products/${id}`);
+                await axios.delete(`https://mart-mongo-server.onrender.com/api/products/${id}`);
                 fetchProducts(); // Refresh list
             } catch (error) {
                 console.error('Error deleting product:', error);
@@ -63,7 +63,7 @@ const ProductList = () => {
                                 <tr key={p.id} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f9f9f9' }}>
                                     <td style={tdStyle}>{p.id}</td>
                                     <td style={tdStyle}>
-                                        <img src={`http://localhost:5000/products/${p.image1}`} alt={p.pname} style={{ width: '60px', height: '60px', objectFit: 'cover' }} />
+                                        <img src={`https://mart-mongo-server.onrender.com/products/${p.image1}`} alt={p.pname} style={{ width: '60px', height: '60px', objectFit: 'cover' }} />
                                     </td>
                                     <td style={tdStyle}>{p.pname}</td>
                                     <td style={tdStyle}>{p.category}</td>

@@ -85,7 +85,7 @@ const FeatProducts = () => {
                       <i className="pe-7s-like"></i>
                     </a>
                     <a href="#"><i className="pe-7s-shuffle"></i></a>
-                    <Link to={`/product/productDetails/${product.id}`}>
+                    <Link to={`/product/productDetails/${product._id}`}>
                       <i className="pe-7s-clock"></i>
                     </Link>
                     <a href="#"><i className="pe-7s-cart"></i>Add to Cart</a>

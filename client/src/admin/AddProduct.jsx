@@ -79,7 +79,7 @@ const AddProduct = () => {
             Object.entries(formData).forEach(([key, val]) => payload.append(key, val));
             images.forEach((img, i) => img && payload.append(`image${i + 1}`, img));
 
-            await axios.post('http://localhost:5000/api/products', payload, {
+            await axios.post('https://mart-mongo-server.onrender.com/api/products', payload, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
