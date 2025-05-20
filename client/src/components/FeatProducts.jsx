@@ -11,7 +11,7 @@ const FeatProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/products') // Adjust URL to your backend endpoint
+        const res = await axios.get('https://mart-mongo-server.onrender.com/api/products') // Adjust URL to your backend endpoint
         setProducts(res.data)
         setLoading(false)
       } catch (err) {
@@ -26,7 +26,7 @@ const FeatProducts = () => {
   const handleAddToWishlist = async (productId) => {
     try {
       const user_id = 4001; // Replace this with the actual logged-in user ID
-      await axios.post('http://localhost:5000/api/wishlist', {
+      await axios.post('https://mart-mongo-server.onrender.com/api/wishlist', {
         product_id: productId,
         user_id: user_id,
       });
@@ -37,7 +37,7 @@ const FeatProducts = () => {
     }
   };
 
-  const backendUrl = 'http://localhost:5000';
+  const backendUrl = 'https://mart-mongo-server.onrender.com';
 
   if (loading) return <p>Loading products...</p>
   if (error) return <p>{error}</p>
