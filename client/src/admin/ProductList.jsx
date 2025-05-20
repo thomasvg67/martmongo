@@ -75,7 +75,7 @@ const ProductList = () => {
                                     <td style={tdStyle}>{p.available === 1 ? 'Available' : 'Not Available'}</td>
                                     <td style={tdStyle}>
                                         <button onClick={() => navigate(`/admin/editProducts/${p._id}`)} style={editButtonStyle}>Edit</button>
-                                        <button onClick={() => handleDelete(p.id)} style={deleteButtonStyle}>Delete</button>
+                                        <button onClick={() => handleDelete(p._id)} style={deleteButtonStyle}>Delete</button>
                                     </td>
                                 </tr>
                             ))}

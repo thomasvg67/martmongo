@@ -133,7 +133,7 @@ const EditProduct = () => {
                 }
             });
 
-            await axios.put(`http://localhost:5000/api/products/${id}`, payload, {
+            await axios.put(`https://mart-mongo-server.onrender.com/api/products/${id}`, payload, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
