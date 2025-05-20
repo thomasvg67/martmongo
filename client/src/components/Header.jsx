@@ -27,10 +27,10 @@ const Header = () => {
             <div className="">
               <div className="header-top-menu">
                 <ul className="nav nav-pills navbar-right">
-                  <li><a href="#">My Account</a></li>
-                  <li><a href="#">Wishlist</a></li>
+                  <li><a href="/admin/addProducts">My Account</a></li>
+                  <li><a href="/wishlist">Wishlist</a></li>
                   <li><a href="#">Cart</a></li>
-                  <li><a href="#">Checkout</a></li>
+                  <li><a href="/admin">Checkout</a></li>
                   <li>
                     <a href="#">
                       <i className="pe-7s-lock"></i>Login/Register
